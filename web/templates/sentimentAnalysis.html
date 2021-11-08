@@ -12,10 +12,11 @@
           <li><a href="/sentiment-analysis">Sentiment Analysis</a></li>
         </ul>
         <div style="text-align: center; margin-top: 150px">
-            <h1>Object Detection - YOLOv5</h1>
-            <form action="/object-detection/od-fileUpload" method="POST" enctype="multipart/form-data">
-                <input type="file" name="file"/>
-                <input type="submit"/>
+            <h1>Sentiment Analysis - KcELECTRA</h1>
+            <h2>↓ 한국어 문장 입력 ↓</h2>
+            <form action="/od-download" method="POST" enctype="multipart/form-data">
+                <input type="text" name="text" height="150px" size="100px"/>
+                <input type="button" value="입력"/>
             </form>
             <br>
         </div>
