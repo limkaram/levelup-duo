@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Object Detection</title>
+        <link rel="stylesheet" type="text/css" href="../static/index.css" />
+    </head>
+    <body>
+        <ul>
+          <li><a class="active" href="/">OP.GG</a></li>
+          <li><a href="/object-detection">Object Detection</a></li>
+          <li><a href="/sentiment-analysis">Sentiment Analysis</a></li>
+        </ul>
+        <div style="text-align: center; margin-top: 150px">
+            <h1 style="color: #5D84E1">Sentiment Analysis - KcELECTRA</h1>
+            <h2>↓ 한국어 문장 입력 ↓</h2>
+            <form action="/sentiment-analysis/sa-predict" method="POST" enctype="multipart/form-data">
+                <input type="text" name="text" height="150px" size="70px"/>
+                <input type="submit" value="입력"/>
+            </form>
+            <br>
+            <h2>"{{ input }}"</h2>
+            <h2><U>{{ pred[0] }}%</U> 확률로 <span style="color: #FF0000">부정적</span></h2>
+            <h2><U>{{ pred[1] }}%</U> 확률로 <span style="color: #0000FF">긍정적</span></h2>
+            <br>
+        </div>
+    </body>
 </html>
